@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This class represents a Student with attributes like id, name, and age.
 class Student < Person
   attr_accessor :classroom

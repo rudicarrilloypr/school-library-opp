@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This class acts as a base decorator for Nameable objects. It encapsulates the Nameable object
 class Decorator < Nameable
   attr_accessor :nameable

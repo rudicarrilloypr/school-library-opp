@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This class represents a Person with attributes like id, name, and age.
 class Person < Nameable
   attr_accessor :name, :age, :rentals
