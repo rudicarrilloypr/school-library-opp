@@ -5,13 +5,13 @@ def main
 
   loop do
     puts "\nPlease choose an option by entering a number:"
-    puts "1 - List all books"
-    puts "2 - List all people"
-    puts "3 - Create a person"
-    puts "4 - Create a book"
-    puts "5 - Create a rental"
-    puts "6 - List all rentals for a given person id"
-    puts "7 - Exit"
+    puts '1 - List all books'
+    puts '2 - List all people'
+    puts '3 - Create a person'
+    puts '4 - Create a book'
+    puts '5 - Create a rental'
+    puts '6 - List all rentals for a given person id'
+    puts '7 - Exit'
 
     choice = gets.chomp.to_i
 
@@ -29,10 +29,10 @@ def main
     when 6
       app.list_rentals_by_person_id
     when 7
-      puts "Thank you for using this app!"
+      puts 'Thank you for using this app!'
       break
     else
-      puts "Invalid option. Please enter a number between 1 and 7."
+      puts 'Invalid option. Please enter a number between 1 and 7.'
     end
   end
 end
