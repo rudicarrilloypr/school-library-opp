@@ -20,7 +20,7 @@ classroom = Classroom.new('10th Grade')
 puts classroom.label
 
 student1 = Student.new(19, classroom, 'Jane')
-puts student1.classroom.label # should print "10th Grade"
+puts student1.classroom.label
 
 # Now test for Student
 puts student1.name
@@ -46,7 +46,7 @@ classroom = Classroom.new('10th Grade')
 puts classroom.label
 
 student1 = Student.new(19, classroom, 'Jane')
-puts student1.classroom.label # should print "10th Grade"
+puts student1.classroom.label
 
 # Test for Book
 book1 = Book.new('1984', 'George Orwell')
@@ -57,5 +57,5 @@ rental1 = Rental.new('2022-09-04', book1, student1)
 puts rental1.date
 
 # Verify the many-to-many relationship
-puts student1.rentals.first.date # should print "2022-09-04"
-puts book1.rentals.first.date    # should print "2022-09-04"
+puts student1.rentals.first.date
+puts book1.rentals.first.date
