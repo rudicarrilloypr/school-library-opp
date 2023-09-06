@@ -16,9 +16,9 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  AllowedMethods: ['describe']
+  AllowedMethods: ['describe', 'context']
   Max: 30
-  Metrics/CyclomaticComplexity:
+Metrics/CyclomaticComplexity:
   Max: 10
 
 

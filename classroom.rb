@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This class represents a Classroom with a label attribute.
 class Classroom
   attr_accessor :label, :students

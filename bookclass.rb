@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This class represents a Book with a title and author.
 class Book
   attr_accessor :title, :author, :rentals

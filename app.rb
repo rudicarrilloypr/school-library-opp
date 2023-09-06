@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative 'nameable'
 require_relative 'person'
 require_relative 'student'
@@ -11,6 +9,7 @@ require_relative 'classroom'
 require_relative 'bookclass'
 require_relative 'rental'
 
+# This class represents a Teacher with attributes like id, name, and age.
 class App
   def initialize
     @people = []

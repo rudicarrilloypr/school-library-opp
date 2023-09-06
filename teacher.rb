@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative 'person'
 # This class represents a Teacher with attributes like id, name, and age.
 class Teacher < Person
