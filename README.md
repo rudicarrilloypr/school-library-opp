@@ -86,6 +86,12 @@ Clone this repository to your desired folder:
 - LinkedIn: [Rudi Carrillo](https://www.linkedin.com/in/rudi-carrillo/)
 - Instagram: [@__rudicarrillo](https://www.instagram.com/_rudicarrillo/)
 
+👤 **Muhammad Aminu Salihu**
+
+- GitHub: [@mohashyne](https://github.com/mohashyne)
+- Twitter: [@muhammadslyhu](https://twitter.com/muhammadsalyhu)
+- LinkedIn: [muhammad-salihu](https://linkedin.com/in/msalyhu)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
