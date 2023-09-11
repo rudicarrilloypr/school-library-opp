@@ -31,17 +31,17 @@ class App
   def create_person
     person = PersonFactory.create_person
     return unless person
-    
+
     @people << person
     puts "#{person.class} created successfully"
   end
-  
+
   def create_book
     book = BookFactory.create_book
     @books << book
     puts 'Book created successfully'
   end
-  
+
   def create_rental
     rental = RentalFactory.create_rental(@books, @people)
     @rentals << rental
