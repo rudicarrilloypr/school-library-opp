@@ -8,6 +8,9 @@ require_relative 'trimmer_decorator'
 require_relative 'classroom'
 require_relative 'bookclass'
 require_relative 'rental'
+require_relative 'book_factory'
+require_relative 'rental_factory'
+require_relative 'person_factory'
 
 person1 = Person.new(15, 'John')
 puts person1.id
