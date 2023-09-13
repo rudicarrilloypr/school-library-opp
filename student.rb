@@ -12,4 +12,8 @@ class Student < Person
   def play_hooky
     '¯\\(ツ)/¯'
   end
+
+  def to_h
+    super.merge({ classroom: @classroom.label }) # Assuming label uniquely identifies a classroom
+  end
 end

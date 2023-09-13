@@ -9,4 +9,8 @@ class Teacher < Person
   def can_use_services?
     true
   end
+
+  def to_h
+    super.merge({ specialization: @specialization })
+  end
 end

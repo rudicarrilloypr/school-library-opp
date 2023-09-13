@@ -11,4 +11,11 @@ class Classroom
     @students << student
     student.classroom = self
   end
+
+  def to_h
+    {
+      label: @label,
+      student_ids: @students.map(&:id)
+    }
+  end
 end

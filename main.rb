@@ -23,6 +23,7 @@ def main
     when 5 then app.create_rental
     when 6 then app.list_rentals_by_person_id
     when 7
+      app.close
       puts 'Thank you for using this app!'
       break
     else

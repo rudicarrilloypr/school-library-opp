@@ -25,4 +25,14 @@ class Person < Nameable
   def of_age?
     @age >= 18
   end
+
+  def to_h
+    {
+      id: @id,
+      name: @name,
+      age: @age,
+      parent_permission: @parent_permission,
+      rentals: @rentals.map(&:to_h) # If rentals need to be saved within people
+    }
+  end
 end
