@@ -1,34 +1,24 @@
-require_relative '../bookclass'
+require_relative '../book'
 
 RSpec.describe Book do
-  describe Book do
-    let(:book) { Book.new('Title 1', 'Author 1') }
+  describe '#initialize' do
+    it 'creates a new book object with default values if no arguments are provided' do
+      book = Book.new
 
-    describe '#initialize' do
-      it 'creates a book with title and author' do
-        expect(book.title).to eq('Title 1')
-        expect(book.author).to eq('Author 1')
-      end
-
-      it 'has an id' do
-        expect(book.id).not_to be_nil
-      end
-
-      it 'initializes rentals as an empty array' do
-        expect(book.rentals).to be_empty
-      end
+      expect(book).to be_a(Book)
+      expect(book.id).to be >= 100 && be <= 10_000
+      expect(book.title).to eq('no title')
+      expect(book.author).to eq('no author')
+      expect(book.rentals).to be_empty
     end
 
-    describe '#to_h' do
-      it 'returns a hash representation of the book' do
-        expected_hash = {
-          id: book.id,
-          title: 'Title 1',
-          author: 'Author 1',
-          rentals: []
-        }
-        expect(book.to_h).to eq(expected_hash)
-      end
+    it 'creates a new book object with provided arguments' do
+      book = Book.new(123, 'The Great Gatsby', 'F. Scott Fitzgerald')
+
+      expect(book.id).to eq(123)
+      expect(book.title).to eq('The Great Gatsby')
+      expect(book.author).to eq('F. Scott Fitzgerald')
+      expect(book.rentals).to be_empty
     end
   end
 end

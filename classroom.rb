@@ -1,6 +1,6 @@
-# This class represents a Classroom with a label attribute.
 class Classroom
-  attr_accessor :label, :students
+  attr_accessor :label
+  attr_reader :students
 
   def initialize(label)
     @label = label
@@ -10,12 +10,5 @@ class Classroom
   def add_student(student)
     @students << student
     student.classroom = self
-  end
-
-  def to_h
-    {
-      label: @label,
-      student_ids: @students.map(&:id)
-    }
   end
 end

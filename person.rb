@@ -1,11 +1,11 @@
-# This class represents a Person with attributes like id, name, and age.
-class Person < Nameable
-  attr_accessor :name, :age, :rentals
-  attr_reader :id
+require_relative 'nameable'
 
-  def initialize(age, name = 'Unknown', parent_permission: true)
+class Person < Nameable
+  attr_accessor :id, :name, :age, :rentals
+
+  def initialize(name:, age:, parent_permission: true)
     super()
-    @id = rand(1..1000)
+    @id = Random.rand(1..1000)
     @name = name
     @age = age
     @parent_permission = parent_permission
@@ -17,22 +17,24 @@ class Person < Nameable
   end
 
   def correct_name
-    @name
+    name
+  end
+
+  def add_rental(date, book)
+    Rental.new(date, book, self)
   end
 
   private
 
   def of_age?
-    @age >= 18
+    @age && @age >= 18
   end
 
-  def to_h
+  def to_hash
     {
-      id: @id,
-      name: @name,
-      age: @age,
-      parent_permission: @parent_permission,
-      rentals: @rentals.map(&:to_h) # If rentals need to be saved within people
+      'id' => @id,
+      'name' => @name,
+      'age' => @age
     }
   end
 end

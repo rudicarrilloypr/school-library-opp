@@ -1,3 +1,5 @@
+require 'rspec'
+
 module UserInputHelper
   def get_user_input(prompt)
     puts prompt

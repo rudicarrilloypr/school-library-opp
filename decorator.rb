@@ -1,10 +1,9 @@
-# This class acts as a base decorator for Nameable objects. It encapsulates the Nameable object
-class Decorator < Nameable
-  attr_accessor :nameable
+require_relative 'nameable'
 
+class Decorator < Nameable
   def initialize(nameable)
-    super()
     @nameable = nameable
+    super()
   end
 
   def correct_name
