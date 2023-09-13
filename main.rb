@@ -1,4 +1,5 @@
 require_relative 'app'
+require_relative 'user_input_helper'
 
 def main
   app = App.new

@@ -12,6 +12,7 @@ require_relative 'rental'
 require_relative 'book_factory'
 require_relative 'rental_factory'
 require_relative 'person_factory'
+require_relative 'user_input_helper'
 
 # This class represents a Teacher with attributes like id, name, and age.
 class App
