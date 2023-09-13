@@ -1,22 +1,3 @@
 [
-  {
-    "id": 679,
-    "name": "hassan",
-    "age": 22,
-    "parent_permission": true,
-    "rentals": [
-
-    ],
-    "classroom": "10th Grade"
-  },
-  {
-    "id": 40,
-    "name": "Alaa",
-    "age": 44,
-    "parent_permission": true,
-    "rentals": [
-
-    ],
-    "specialization": "Tech"
-  }
+    
 ]
