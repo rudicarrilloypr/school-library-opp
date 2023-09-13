@@ -4,7 +4,14 @@ class PersonFactory
     choice = gets.chomp.to_i
 
     print 'Age: '
-    age = gets.chomp.to_i
+    age = gets.chomp
+
+    unless age.to_i.to_s == age
+      puts 'Input is not a valid number'
+      return nil
+    end
+
+    age = age.to_i
 
     print 'Name: '
     name = gets.chomp
