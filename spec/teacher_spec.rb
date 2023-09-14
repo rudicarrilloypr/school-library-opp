@@ -1,22 +1,25 @@
 require_relative '../teacher'
-require_relative '../person'
 
 RSpec.describe Teacher do
-  describe Teacher do
-    let(:teacher) { Teacher.new(30, 'Mathematics', 'Jane Doe') }
+  describe '#initialize' do
+    it 'creates a new teacher object with provided attributes' do
+      teacher = Teacher.new(name: 'Mr. Smith', age: 35, specialization: 'Mathematics')
 
-    describe '#initialize' do
-      it 'creates a teacher with age, specialization, name, and default parent permission' do
-        expect(teacher.age).to eq(30)
-        expect(teacher.name).to eq('Jane Doe')
-        expect(teacher.instance_variable_get(:@parent_permission)).to be_truthy
-      end
+      expect(teacher).to be_a(Teacher)
+      expect(teacher.name).to eq('Mr. Smith')
+      expect(teacher.age).to eq(35)
+      expect(teacher.instance_variable_get(:@specialization)).to eq('Mathematics')
+    end
+  end
 
-      it 'has specialization' do
-        expect(teacher.instance_variable_get(:@specialization)).to eq('Mathematics')
-      end
+  describe '#can_use_services?' do
+    teacher = Teacher.new(name: 'Mrs. Johnson', age: 42, specialization: 'History')
+
+    it 'returns true for teacher' do
+      expect(teacher.can_use_services?).to eq(true)
     end
 
+<<<<<<< HEAD
     describe '#can_use_services?' do
       it 'returns true for teachers' do
         expect(teacher.can_use_services?).to be_truthy
@@ -35,6 +38,10 @@ RSpec.describe Teacher do
         }
         expect(teacher.to_h).to eq(expected_hash)
       end
+=======
+    it 'Should check if the object is converted into hash' do
+      expect(teacher.to_hash.class).to eq Hash
+>>>>>>> a4b50254b8b8d4ffd0d641c2b524332f5386095b
     end
   end
 end

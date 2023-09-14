@@ -1,5 +1,11 @@
-# This class is a decorator that modifies the behavior of the correct_name method
+require_relative 'Decorator'
+
 class CapitalizeDecorator < Decorator
+  def initialize(nameable)
+    @nameable = nameable
+    super(nameable)
+  end
+
   def correct_name
     @nameable.correct_name.capitalize
   end

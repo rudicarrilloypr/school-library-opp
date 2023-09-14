@@ -1,8 +1,8 @@
 require_relative 'person'
-# This class represents a Teacher with attributes like id, name, and age.
+
 class Teacher < Person
-  def initialize(age, specialization, name = 'Unknown', parent_permission: true)
-    super(age, name, parent_permission: parent_permission)
+  def initialize(name:, age:, specialization:)
+    super(name: name, age: age)
     @specialization = specialization
   end
 
@@ -10,7 +10,15 @@ class Teacher < Person
     true
   end
 
-  def to_h
-    super.merge({ specialization: @specialization })
+  def to_hash
+    {
+      'id' => @id,
+      'type' => self.class.name,
+      'name' => @name,
+      'age' => @age,
+      'specialization' => @specialization,
+      'parent_permission' => @parent_permission,
+      'rentals' => @rentals.map { |rental| { 'date' => rental.date } }
+    }
   end
 end
