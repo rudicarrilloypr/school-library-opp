@@ -1,3 +1,4 @@
+require_relative 'nameable'
 # This class represents a Person with attributes like id, name, and age.
 class Person < Nameable
   attr_accessor :name, :age, :rentals
@@ -20,19 +21,19 @@ class Person < Nameable
     @name
   end
 
-  private
-
-  def of_age?
-    @age >= 18
-  end
-
   def to_h
     {
       id: @id,
       name: @name,
       age: @age,
       parent_permission: @parent_permission,
-      rentals: @rentals.map(&:to_h) # If rentals need to be saved within people
+      rentals: @rentals.map(&:to_h)
     }
+  end
+
+  private
+
+  def of_age?
+    @age >= 18
   end
 end

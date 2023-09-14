@@ -30,7 +30,8 @@ RSpec.describe Teacher do
           name: 'Jane Doe',
           age: 30,
           parent_permission: true,
-          specialization: 'Mathematics'
+          specialization: 'Mathematics',
+          rentals: []
         }
         expect(teacher.to_h).to eq(expected_hash)
       end

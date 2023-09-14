@@ -1,11 +1,12 @@
 # spec/student_spec.rb
+require_relative '../person'
 require_relative '../student'
 require_relative '../classroom'
 
 RSpec.describe Student do
   describe Student do
     let(:classroom) { Classroom.new('10A') }
-    let(:student) { Student.new(16, classroom, 'John Doe') }
+    let(:student) { Student.new(age: 16, classroom: classroom, name: 'John Doe') }
 
     describe '#initialize' do
       it 'creates a student with age, classroom, name, and default parent permission' do
@@ -33,7 +34,8 @@ RSpec.describe Student do
           name: 'John Doe',
           age: 16,
           parent_permission: true,
-          classroom: '10A'
+          classroom: '10A',
+          rentals: []
         }
         expect(student.to_h).to eq(expected_hash)
       end

@@ -1,5 +1,5 @@
-require_relative '../decorator'
 require_relative '../nameable'
+require_relative '../decorator'
 require_relative '../person'
 
 RSpec.describe Decorator do

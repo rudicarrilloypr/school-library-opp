@@ -1,5 +1,5 @@
 require_relative '../rental'
-require_relative '../book'
+require_relative '../bookclass'
 require_relative '../person'
 
 RSpec.describe Rental do

@@ -3,7 +3,7 @@
 class Student < Person
   attr_accessor :classroom
 
-  def initialize(age, classroom, name = 'Unknown', parent_permission: true)
+  def initialize(age:, classroom:, name: 'Unknown', parent_permission: true)
     super(age, name, parent_permission: parent_permission)
     @classroom = classroom
     classroom.add_student(self) unless classroom.students.include?(self)
@@ -14,6 +14,6 @@ class Student < Person
   end
 
   def to_h
-    super.merge({ classroom: @classroom.label }) # Assuming label uniquely identifies a classroom
+    super.merge({ classroom: @classroom.label })
   end
 end
